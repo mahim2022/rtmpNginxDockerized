@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  app:
+    build: ./app/
+    ports:
+      - "8000-8002:8000"
+      # - "1935-1937:1935"
+  nginx:
+    build: ./nginx/
+    ports:
+      - "80:3000"
+  # ffmpeg:
+  #   image: linuxserver/ffmpeg
